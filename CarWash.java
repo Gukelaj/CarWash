@@ -21,7 +21,7 @@ public class CarWash
 
     public String toString()
     {
-        return name + " " + price + " kr";
+        return "Wash: " + name + ". Price: " + price + " kr";
     }
 
 }
