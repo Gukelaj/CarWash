@@ -12,6 +12,8 @@ public class Run
             System.out.println("2. Refill your washcard");
             System.out.println("3. Get your balance");
             System.out.println("4. Quit");
+            System.out.println("Press (1/2/3/4)");
+
             String input = System.console().readLine();
         
             if(input.equals("1")) 
@@ -21,16 +23,12 @@ public class Run
 
             else if(input.equals("2")) 
             {
-                System.out.print("Which amount do you want to add?");
-                String input1 = System.console().readLine();
-                int hp = Integer.parseInt(input1);
-                customer1.addValue(hp);
-                System.out.println("Your current balance: " + customer1.getBalance());
-                System.out.println("=========="); 
+                customer1.refill();
             }
 
             else if(input.equals("3")) 
             {
+                System.out.println("==========");
                 customer1.getWashCardBalance();
                 System.out.println("==========");
             }
@@ -48,10 +46,6 @@ public class Run
             }
 
         }
-        // System.out.print("Would you like a receipt? (y/n)");
-        //     String input2 = System.console().readLine();
-        //     if(input2.equals("y")) {
-                
-        //     }
+
     }
 }
