@@ -1,3 +1,7 @@
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.text.DateFormat;
+
 public class Washcard 
 {
     private String surName;
@@ -45,9 +49,14 @@ public class Washcard
         String input2 = System.console().readLine();
         if(input2.equals("y")) 
         {
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            Date date = new Date();
             System.out.println("==========");
+            System.out.println("Receipt");
+            System.out.println(dateFormat.format(date));
             System.out.println(x);
             System.out.println("Current balance: " + getBalance() + " kr");
+            System.out.println("Thanks for using Star CarWash"); 
             System.out.println("==========");
         }
         
