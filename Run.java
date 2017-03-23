@@ -5,7 +5,9 @@ public class Run
         
         Washcard customer1 = new Washcard("Lars","Larsen",154.5);
 
-        for(int i = 0; i <= 20; i++) 
+        boolean test = true;
+
+        while(test)
         {
             System.out.println("What would you like to do?");
             System.out.println("1. Wash your Car");
@@ -37,7 +39,7 @@ public class Run
             {
                 System.out.println("Thanks for using Star CarWash"); 
                 System.out.println("==========");
-                break;
+                test = false;
             }
             
             else
