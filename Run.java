@@ -7,7 +7,7 @@ public class Run
         
 
         // CarWash Startup
-        System.out.println("Enter WashCard:");
+        System.out.println("Enter Username:");
         String washcard = System.console().readLine();
         System.out.println("==========");
 
