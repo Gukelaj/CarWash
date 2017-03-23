@@ -2,6 +2,8 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.text.DateFormat;
 
+
+
 public class Washcard 
 {
     private String surName;
@@ -13,6 +15,7 @@ public class Washcard
     CarWash carwash2 = new CarWash("Gold", 300);
     CarWash carwash3 = new CarWash("Silver", 200);
     CarWash carwash4 = new CarWash("Bronze", 100);
+    
 
     public Washcard(String surName, String lastName, double washCardBalance, String password) 
     {
@@ -21,7 +24,11 @@ public class Washcard
         this.washCardBalance = washCardBalance;
         this.password = password; 
     }
-    
+    public Washcard() 
+    {
+        
+    }
+
     public double getBalance() 
     {
         return washCardBalance;
@@ -35,6 +42,11 @@ public class Washcard
     public String getPassword() 
     {
         return password;
+    }
+
+    public String toString()
+    {
+        return "Name: " + surName + " " + lastName + ". Balance: " + washCardBalance + ".";
     }
 
     public void getWashCardBalance() 
