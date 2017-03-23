@@ -7,22 +7,34 @@ public class Washcard
     private String surName;
     private String lastName;
     private double washCardBalance;
+    private String password;
     
     CarWash carwash1 = new CarWash("Diamond", 400);
     CarWash carwash2 = new CarWash("Gold", 300);
     CarWash carwash3 = new CarWash("Silver", 200);
     CarWash carwash4 = new CarWash("Bronze", 100);
 
-    public Washcard(String surname, String lastName, double washCardBalance) 
+    public Washcard(String surName, String lastName, double washCardBalance, String password) 
     {
         this.surName = surName;
         this.lastName = lastName;
-        this.washCardBalance = washCardBalance; 
+        this.washCardBalance = washCardBalance;
+        this.password = password; 
     }
     
     public double getBalance() 
     {
         return washCardBalance;
+    }
+
+    public String getSurName() 
+    {
+        return surName;
+    }
+    
+    public String getPassword() 
+    {
+        return password;
     }
 
     public void getWashCardBalance() 
