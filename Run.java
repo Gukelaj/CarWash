@@ -38,7 +38,7 @@ public class Run
                         if(password.equals (customer1.getPassword() ))
                         {
                             
-                            // CardWash running
+                            // Card running
                             boolean test = true;
                             while(test)
                             {
@@ -105,7 +105,7 @@ public class Run
                         if(password.equals (customer2.getPassword() ))
                         {
                             
-                            // CardWash running
+                            // Card running
                             boolean test = true;
                             while(test)
                             {
