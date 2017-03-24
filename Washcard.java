@@ -3,7 +3,6 @@ import java.text.SimpleDateFormat;
 import java.text.DateFormat;
 
 
-
 public class Washcard 
 {
     private String surName;
@@ -22,7 +21,7 @@ public class Washcard
         this.surName = surName;
         this.lastName = lastName;
         this.washCardBalance = washCardBalance;
-        this.password = password; 
+        this.password = password;
     }
 
     public double getBalance() 
@@ -94,7 +93,7 @@ public class Washcard
         System.out.println("3. " + carwash3.toString());
         System.out.println("4. " + carwash4.toString());
         String input = System.console().readLine();
-        
+
         if(input.equals("1") && (washCardBalance >= carwash1.getPrice())) 
         {
             washCardBalance -= carwash1.getPrice();
@@ -116,7 +115,7 @@ public class Washcard
         else if(input.equals("4") && (washCardBalance >= carwash4.getPrice())) 
         {
             washCardBalance -= carwash4.getPrice();
-            receipt(carwash4.toString()); 
+            receipt(carwash4.toString());
          }
         
         else 
@@ -138,5 +137,4 @@ public class Washcard
         System.out.println("=========="); 
     }
   
-
 }

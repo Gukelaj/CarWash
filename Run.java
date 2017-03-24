@@ -10,7 +10,7 @@ public class Run
         
         while(running) 
         {
-            
+    
             // Login or Buy new WashCard
             System.out.println("Would you like to: 1. Login. 2. Buy WashCard. 3. Quit.");
             System.out.println("Press 1/2/3");
@@ -171,7 +171,7 @@ public class Run
                 Double wcb = Double.parseDouble(washCardBalance);
                 System.out.println("Enter your Password:");
                 String password = System.console().readLine();
-                
+        
                 Washcard customer3 = new Washcard(surName, lastName, wcb, password);
                 System.out.println("==========");
                 System.out.println(customer3.toString());
@@ -184,5 +184,23 @@ public class Run
                 running = false;
             }
         }
+
+
+        Statistic[] st = new Statistic[5];
+        st[0] = new Statistic("Lars", "Larsen");
+
+        System.out.println("Do you want to see the statistics?");
+        String statics = System.console().readLine();
+
+        if (statics.equals("y"))
+        {
+        //her skal vi få den til at printe den vask der er valgt?!?!
+        System.out.println(st[0].getSurName() + " " + st[0].getLastName()); //+ "bought the" + toString());
+        }
+          else 
+        {
+            System.out.println("==========");
+        }
+
     }
 }
