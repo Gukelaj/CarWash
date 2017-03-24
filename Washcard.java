@@ -24,10 +24,6 @@ public class Washcard
         this.washCardBalance = washCardBalance;
         this.password = password; 
     }
-    public Washcard() 
-    {
-        
-    }
 
     public double getBalance() 
     {
