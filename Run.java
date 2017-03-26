@@ -5,6 +5,7 @@ public class Run
         // Customer
         Washcard customer1 = new Washcard("Lars", "Larsen", 154.5, "1234");
         Washcard customer2 = new Washcard("Flemming", "Olsen", 910, "9876");
+        Washcard c = new Washcard();
         
         boolean running = true;
         
@@ -196,6 +197,7 @@ public class Run
         {
         //her skal vi få den til at printe den vask der er valgt?!?!
         System.out.println(st[0].getSurName() + " " + st[0].getLastName()); //+ "bought the" + toString());
+        c.printArray();
         }
           else 
         {

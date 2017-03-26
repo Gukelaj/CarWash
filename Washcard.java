@@ -14,6 +14,7 @@ public class Washcard
     CarWash carwash2 = new CarWash("Gold", 300);
     CarWash carwash3 = new CarWash("Silver", 200);
     CarWash carwash4 = new CarWash("Bronze", 100);
+    Statistic s = new Statistic();
     
 
     public Washcard(String surName, String lastName, double washCardBalance, String password) 
@@ -22,6 +23,11 @@ public class Washcard
         this.lastName = lastName;
         this.washCardBalance = washCardBalance;
         this.password = password;
+    }
+
+    public Washcard() 
+    {
+      
     }
 
     public double getBalance() 
@@ -98,6 +104,8 @@ public class Washcard
         {
             washCardBalance -= carwash1.getPrice();
             receipt(carwash1.toString());   
+            s.addCarwash(carwash1);
+            s.print();
         }
 
         else if(input.equals("2") && (washCardBalance >= carwash2.getPrice())) 
@@ -135,6 +143,11 @@ public class Washcard
         System.out.println("==========");
         System.out.println("Your current balance: " + getBalance());
         System.out.println("=========="); 
+    }
+
+    public void printArray()
+    {
+        s.print();
     }
   
 }
