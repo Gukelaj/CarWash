@@ -105,25 +105,33 @@ public class Washcard
             washCardBalance -= carwash1.getPrice();
             receipt(carwash1.toString());   
             s.addCarwash(carwash1);
-            s.print();
+            
         }
 
         else if(input.equals("2") && (washCardBalance >= carwash2.getPrice())) 
         {
             washCardBalance -= carwash2.getPrice();
-            receipt(carwash2.toString());        
+            receipt(carwash2.toString()); 
+            s.addCarwash(carwash2);       
         }
 
         else if(input.equals("3") && (washCardBalance >= carwash3.getPrice())) 
         {
             washCardBalance -= carwash3.getPrice();
             receipt(carwash3.toString());
+            s.addCarwash(carwash3);
         }
 
         else if(input.equals("4") && (washCardBalance >= carwash4.getPrice())) 
         {
             washCardBalance -= carwash4.getPrice();
             receipt(carwash4.toString());
+            s.addCarwash(carwash4);
+         }
+        
+        else if(input.equals("9")) 
+        {
+            s.print();
          }
         
         else 

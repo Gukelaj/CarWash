@@ -80,6 +80,12 @@ public class Run
                                     test = false;
                                 }
                                 
+                                // Statistic
+                                else if(input.equals("9")) 
+                                {
+                                    c.printArray();
+                                }
+                                
                                 // Error option
                                 else
                                 {
