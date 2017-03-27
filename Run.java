@@ -5,7 +5,6 @@ public class Run
         // Customer
         Washcard customer1 = new Washcard("Lars", "Larsen", 154.5, "1234");
         Washcard customer2 = new Washcard("Flemming", "Olsen", 910, "9876");
-        Washcard c = new Washcard();
         
         boolean running = true;
         
@@ -79,12 +78,6 @@ public class Run
                                     System.out.println("Thanks for using Star CarWash"); 
                                     System.out.println("==========");
                                     test = false;
-                                }
-                                
-                                // Statistic
-                                else if(input.equals("9")) 
-                                {
-                                    c.printArray();
                                 }
                                 
                                 // Error option
@@ -198,9 +191,11 @@ public class Run
 
         if (statics.equals("y"))
         {
-        customer1.printArray();
-        customer2.printArray();
-        System.out.println("==========");
+            System.out.println("Washes Customer Lars have bought:");
+            customer1.printArray();
+            System.out.println("Washes Customer Flemming have bought:");
+            customer2.printArray();
+            System.out.println("==========");
         }
           else 
         {
