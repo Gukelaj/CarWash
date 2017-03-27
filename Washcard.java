@@ -72,6 +72,14 @@ public class Washcard
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             Date date = new Date();
             System.out.println("==========");
+            try
+            {
+                Thread.sleep(2000);
+            }
+            catch (Exception e)
+            {
+                Thread.currentThread().interrupt();
+            }
             System.out.println("Receipt");
             System.out.println(dateFormat.format(date));
             System.out.println(x);
@@ -100,6 +108,15 @@ public class Washcard
             washCardBalance -= carwash1.getPrice();
             receipt(carwash1.toString());   
             s.addCarwash(carwash1);
+            
+            try
+            {
+                Thread.sleep(5000);
+            }
+            catch (Exception e)
+            {
+                Thread.currentThread().interrupt();
+            }
         
         }
 
@@ -107,7 +124,16 @@ public class Washcard
         {
             washCardBalance -= carwash2.getPrice();
             receipt(carwash2.toString()); 
-            s.addCarwash(carwash2);       
+            s.addCarwash(carwash2); 
+
+            try
+            {
+                Thread.sleep(5000);
+            }
+            catch (Exception e)
+            {
+                Thread.currentThread().interrupt();
+            }      
         }
 
         else if(input.equals("3") && (washCardBalance >= carwash3.getPrice())) 
@@ -115,6 +141,15 @@ public class Washcard
             washCardBalance -= carwash3.getPrice();
             receipt(carwash3.toString());
             s.addCarwash(carwash3);
+
+            try
+            {
+                Thread.sleep(5000);
+            }
+            catch (Exception e)
+            {
+                Thread.currentThread().interrupt();
+            }
         }
 
         else if(input.equals("4") && (washCardBalance >= carwash4.getPrice())) 
@@ -122,6 +157,15 @@ public class Washcard
             washCardBalance -= carwash4.getPrice();
             receipt(carwash4.toString());
             s.addCarwash(carwash4);
+            
+            try
+            {
+                Thread.sleep(5000);
+            }
+            catch (Exception e)
+            {
+                Thread.currentThread().interrupt();
+            }
          }
         
         else 
@@ -140,6 +184,16 @@ public class Washcard
         int hp = Integer.parseInt(input1);
         addValue(hp);
         System.out.println("==========");
+        
+        try
+        {
+            Thread.sleep(2000);
+        }
+        catch (Exception e)
+        {
+            Thread.currentThread().interrupt();
+        }
+
         System.out.println("Your current balance: " + getBalance());
         System.out.println("=========="); 
     }
