@@ -105,7 +105,7 @@ public class Washcard
             washCardBalance -= carwash1.getPrice();
             receipt(carwash1.toString());   
             s.addCarwash(carwash1);
-            
+        
         }
 
         else if(input.equals("2") && (washCardBalance >= carwash2.getPrice())) 
@@ -129,11 +129,6 @@ public class Washcard
             s.addCarwash(carwash4);
          }
         
-        else if(input.equals("9")) 
-        {
-            s.print();
-         }
-        
         else 
         {
             System.out.println("The Customer dosn't have enough funds available!!");
@@ -141,6 +136,7 @@ public class Washcard
              
         }
     }
+
 
     public void refill()
     {

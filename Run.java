@@ -56,6 +56,7 @@ public class Run
                                 if(input.equals("1")) 
                                 {
                                     customer1.carwash();
+
                                 }
 
                                 // Refill WashCard
@@ -192,18 +193,14 @@ public class Run
             }
         }
 
-
-        Statistic[] st = new Statistic[5];
-        st[0] = new Statistic("Lars", "Larsen");
-
         System.out.println("Do you want to see the statistics?");
         String statics = System.console().readLine();
 
         if (statics.equals("y"))
         {
-        //her skal vi få den til at printe den vask der er valgt?!?!
-        System.out.println(st[0].getSurName() + " " + st[0].getLastName()); //+ "bought the" + toString());
-        c.printArray();
+        customer1.printArray();
+        customer2.printArray();
+        System.out.println("==========");
         }
           else 
         {
