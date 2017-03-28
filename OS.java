@@ -1,16 +1,40 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class OS
 {
     // Customer
+    ArrayList<Washcard> customers = new ArrayList<Washcard>();
+
+    
     Washcard customer1 = new Washcard("Lars", "Larsen", 154.5, "1234");
     Washcard customer2 = new Washcard("Flemming", "Olsen", 910, "9876");
+
+    
+    
 
     public OS()
     {
 
     }
 
+    public void addCustomer(Washcard customer)
+    {
+        customers.add(customer);
+    }
+
+    public void print()
+    {
+        for(int i = 0; i < customers.size(); i++)
+        {
+            System.out.println(customers.get(i));
+        }
+    }
+
     public void startMenu()
     {
+        addCustomer(customer1);
+        addCustomer(customer2);
         boolean running = true;
         
         while(running) 
@@ -42,6 +66,7 @@ public class OS
                 System.out.println("==========");
                 System.out.println(customer3.toString());
                 System.out.println("==========");
+                addCustomer(customer3);
             }
 
             else if(login.equals ("3"))
@@ -58,59 +83,40 @@ public class OS
         String washcard = System.console().readLine();
         System.out.println("==========");
 
+        
         // Enter WashCard (Type surname)
-        if(washcard.equals (customer1.getSurName() ))
+        for(int i = 0; i < customers.size(); i++)
         {
-                    
-            // Enter password
-            for(int i = 0; i < 3; i++) 
+            if(washcard.equals (customers.get(i).getSurName() ))
             {
-                System.out.println("Enter Password:");
-                String password = System.console().readLine();
-                System.out.println("==========");
+                        
+                // Enter password
+                for(int y = 0; y < 3; y++) 
+                {
+                    System.out.println("Enter Password:");
+                    String password = System.console().readLine();
+                    System.out.println("==========");
 
-                try
-                {
-                    Thread.sleep(2000);
-                }
-                catch (Exception e)
-                {
-                    Thread.currentThread().interrupt();
-                }
+                    try
+                    {
+                        Thread.sleep(2000);
+                    }
+                    catch (Exception e)
+                    {
+                        Thread.currentThread().interrupt();
+                    }
 
-                if(password.equals (customer1.getPassword() ))
-                {
-                    runMenu(customer1);
+                    if(password.equals (customers.get(i).getPassword() ))
+                    {
+                        runMenu(customers.get(i));
+                        break;
+                    } 
                 }
                 break;
             }
         }
 
-        else if(washcard.equals (customer2.getSurName() ))
-        { 
-            // Enter password
-            for(int i = 0; i < 3; i++) 
-            {
-                System.out.println("Enter Password:");
-                String password = System.console().readLine();
-                System.out.println("==========");
 
-                try
-                {
-                    Thread.sleep(2000);
-                }
-                catch (Exception e)
-                {
-                    Thread.currentThread().interrupt();
-                }
-
-                if(password.equals (customer2.getPassword() ))
-                {
-                    runMenu(customer2);
-                }
-                break;
-            }
-        }
     }
 
     public void runMenu(Washcard customer)
@@ -172,10 +178,11 @@ public class OS
 
         if (statics.equals("y"))
         {
-            System.out.println("Washes Customer Lars have bought:");
-            customer1.printArray();
-            System.out.println("Washes Customer Flemming have bought:");
-            customer2.printArray();
+            System.out.println("Washes Customers have bought:");
+            for(int i = 0; i < customers.size(); i++)
+            {
+                customers.get(i).printArray();
+            }
             System.out.println("==========");
         }
           else 
