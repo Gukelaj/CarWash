@@ -9,10 +9,7 @@ public class OS
     
     Washcard customer1 = new Washcard("Lars", "Larsen", 154.5, "1234");
     Washcard customer2 = new Washcard("Flemming", "Olsen", 910, "9876");
-
     
-    
-
     public OS()
     {
 
