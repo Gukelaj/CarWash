@@ -13,7 +13,7 @@ public class Washcard
     CarWash carwash1 = new CarWash("Diamond", 400);
     CarWash carwash2 = new CarWash("Gold", 300);
     CarWash carwash3 = new CarWash("Silver", 200);
-    CarWash carwash4 = new CarWash("Bronze", 100);
+    CarWash carwash4 = new CarWash("Bronze", 150);
     Statistic s = new Statistic();
     
 
